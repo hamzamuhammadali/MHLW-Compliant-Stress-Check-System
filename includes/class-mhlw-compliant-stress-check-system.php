@@ -74,6 +74,9 @@ class Mhlw_Compliant_Stress_Check_System {
 		}
 		$this->plugin_name = 'mhlw-compliant-stress-check-system';
 
+		// Load AJAX callbacks FIRST - before anything else
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/callback.php';
+
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
@@ -145,6 +148,11 @@ class Mhlw_Compliant_Stress_Check_System {
 		 * Debug file for AJAX testing.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'debug-ajax.php';
+
+		/**
+		 * AJAX Callbacks:
+		 */
+		include_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/callback.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
@@ -238,15 +246,15 @@ class Mhlw_Compliant_Stress_Check_System {
 	 */
 	public function init() {
 		// Handle PDF download requests
-		if (isset($_GET['mhlw_download_pdf'])) {
-			$response_id = intval($_GET['mhlw_download_pdf']);
-			Mhlw_Stress_Check_PDF::output_pdf($response_id);
-		}
+		// if (isset($_GET['mhlw_download_pdf'])) {
+		// 	$response_id = intval($_GET['mhlw_download_pdf']);
+		// 	Mhlw_Stress_Check_PDF::output_pdf($response_id);
+		// }
 
-		// Handle temp PDF downloads
-		if (isset($_GET['mhlw_pdf_token'])) {
-			Mhlw_Stress_Check_PDF::handle_temp_download();
-		}
+		// Handle temp PDF downloads (legacy - now handled by AJAX)
+		// if (isset($_GET['mhlw_pdf_token'])) {
+		// 	Mhlw_Stress_Check_PDF::handle_temp_download();
+		// }
 	}
 
 	/**

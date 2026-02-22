@@ -30,6 +30,7 @@ class Mhlw_Compliant_Stress_Check_System_Activator {
 	public static function activate() {
 		self::create_tables();
 		self::setup_roles();
+		self::flush_rewrite_rules();
 	}
 
 	/**
@@ -165,6 +166,15 @@ class Mhlw_Compliant_Stress_Check_System_Activator {
 				'mhlw_download_own_pdf' => true,
 			)
 		);
+	}
+
+	/**
+	 * Flush WordPress rewrite rules after plugin activation
+	 *
+	 * @since    1.0.0
+	 */
+	private static function flush_rewrite_rules() {
+		flush_rewrite_rules();
 	}
 
 }

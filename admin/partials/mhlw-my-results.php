@@ -86,7 +86,7 @@
     </div>
     
     <div class="mhlw-result-actions">
-        <a href="<?php echo esc_url(add_query_arg('mhlw_download_pdf', '1')); ?>" class="mhlw-btn mhlw-btn-primary">
+        <a  class="mhlw-btn mhlw-btn-primary">
             <?php _e('Download PDF', 'mhlw-compliant-stress-check-system'); ?>
         </a>
     </div>

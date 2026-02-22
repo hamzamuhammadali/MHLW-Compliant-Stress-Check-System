@@ -51,8 +51,6 @@ class Mhlw_Compliant_Stress_Check_System_Admin {
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 		
-		// Register AJAX actions immediately in constructor
-		$this->register_admin_ajax_actions();
 	}
 
 	/**
@@ -71,117 +69,15 @@ class Mhlw_Compliant_Stress_Check_System_Admin {
 	 * @param    string    $hook    Current admin page
 	 */
 	public function enqueue_scripts($hook) {
-		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/mhlw-compliant-stress-check-system-admin.js', array('jquery'), $this->version, false);
-
+		wp_enqueue_script($this->plugin_name.'-admin-js', plugin_dir_url(__FILE__) . 'js/mhlw-compliant-stress-check-system-admin.js', array('jquery'), $this->version, false);
 		// Localize script for AJAX
-		wp_localize_script($this->plugin_name, 'mhlw_admin_ajax', array(
+		wp_localize_script($this->plugin_name.'-admin-js', 'mhlw_admin_ajax', array(
 			'ajax_url' => admin_url('admin-ajax.php'),
 			'nonce' => wp_create_nonce('mhlw_admin_nonce'),
 		));
 
 	}
 
-	/**
-	 * AJAX handler for saving draft responses
-	 *
-	 * @since    1.0.0
-	 */
-	public function ajax_save_draft() {
-		check_ajax_referer('mhlw_admin_nonce', 'nonce');
-
-		if (!is_user_logged_in()) {
-			wp_send_json_error(array('message' => __('Please log in.', 'mhlw-compliant-stress-check-system')));
-			wp_die();
-		}
-
-		$user_id = get_current_user_id();
-		$responses = isset($_POST['responses']) ? $_POST['responses'] : array();
-
-		// Sanitize responses
-		$sanitized_responses = array();
-		foreach ($responses as $question => $value) {
-			$question_num = intval($question);
-			$response_val = intval($value);
-			if ($question_num >= 1 && $question_num <= 57 && $response_val >= 1 && $response_val <= 4) {
-				$sanitized_responses[$question_num] = $response_val;
-			}
-		}
-
-		// Save draft
-		$result = Mhlw_Stress_Check_Database::save_draft($user_id, $sanitized_responses);
-
-		if ($result) {
-			wp_send_json_success(array('message' => __('Draft saved successfully.', 'mhlw-compliant-stress-check-system')));
-		} else {
-			wp_send_json_error(array('message' => __('Failed to save draft.', 'mhlw-compliant-stress-check-system')));
-		}
-		wp_die();
-	}
-
-	/**
-	 * AJAX handler for submitting completed responses
-	 *
-	 * @since    1.0.0
-	 */
-	public function ajax_submit_responses() {
-		check_ajax_referer('mhlw_admin_nonce', 'nonce');
-
-		if (!is_user_logged_in()) {
-			wp_send_json_error(array('message' => __('Please log in.', 'mhlw-compliant-stress-check-system')));
-			wp_die();
-		}
-
-		$user_id = get_current_user_id();
-		$responses = isset($_POST['responses']) ? $_POST['responses'] : array();
-
-		// Validate all 57 questions are answered
-		if (count($responses) !== 57) {
-			wp_send_json_error(array('message' => __('Please answer all 57 questions before submitting.', 'mhlw-compliant-stress-check-system')));
-			wp_die();
-		}
-
-		// Sanitize responses
-		$sanitized_responses = array();
-		foreach ($responses as $question => $value) {
-			$question_num = intval($question);
-			$response_val = intval($value);
-			if ($question_num >= 1 && $question_num <= 57 && $response_val >= 1 && $response_val <= 4) {
-				$sanitized_responses[$question_num] = $response_val;
-			}
-		}
-
-		// Check all questions are answered
-		if (count($sanitized_responses) !== 57) {
-			wp_send_json_error(array('message' => __('Please answer all 57 questions before submitting.', 'mhlw-compliant-stress-check-system')));
-			wp_die();
-		}
-
-		// Calculate scores
-		$scores = Mhlw_Stress_Check_Scoring::calculate_scores($sanitized_responses);
-
-		// Save completed response
-		$response_id = Mhlw_Stress_Check_Database::save_response($user_id, $sanitized_responses, $scores);
-
-		if ($response_id) {
-			wp_send_json_success(array(
-				'message' => __('Thank you for completing the stress check.', 'mhlw-compliant-stress-check-system'),
-				'redirect' => add_query_arg('stress_check_completed', '1', wp_get_referer()),
-			));
-		} else {
-			wp_send_json_error(array('message' => __('Failed to save responses. Please try again.', 'mhlw-compliant-stress-check-system')));
-		}
-		wp_die();
-	}
-
-	/**
-	 * Register AJAX actions
-	 *
-	 * @since    1.0.0
-	 */
-	public function register_admin_ajax_actions() {
-		add_action('wp_ajax_mhlw_save_draft', array($this, 'ajax_save_draft'));
-		add_action('wp_ajax_mhlw_submit_responses', array($this, 'ajax_submit_responses'));
-	}
 
 	/**
 	 * Register admin menus

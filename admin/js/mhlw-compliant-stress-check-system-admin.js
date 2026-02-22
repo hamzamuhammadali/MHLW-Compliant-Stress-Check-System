@@ -245,8 +245,8 @@
                 console.log("Form submission starting...");
                 console.log("mhlw_admin_ajax object:", mhlw_admin_ajax);
                 console.log("Responses collected:", responses);
-                console.log("Form nonce value:", $('#mhlw-stress-check-form input[name="mhlw_form_nonce"]').val());
-
+                console.log("About to send AJAX request...");
+                
                 // Disable submit button to prevent double submission
                 submitBtn.prop('disabled', true).text('Submitting...');
 
@@ -320,6 +320,47 @@
             form.on('change', 'input', function() {
                 formChanged = true;
             });
+
+            // PDF Download function
+            window.downloadPDF = function(responseId) {
+                var downloadBtn = document.querySelector('button[onclick*="' + responseId + '"]');
+                var originalText = downloadBtn.textContent;
+                
+                downloadBtn.disabled = true;
+                downloadBtn.textContent = 'Generating PDF...';
+                
+                $.ajax({
+                    url: mhlw_admin_ajax.ajax_url,
+                    type: 'POST',
+                    data: {
+                        action: 'mhlw_generate_pdf',
+                        response_id: responseId,
+                        nonce: mhlw_admin_ajax.nonce
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            // Create download link
+                            var link = document.createElement('a');
+                            link.href = response.data.pdf_url;
+                            link.download = 'stress-check-result-' + responseId + '.html';
+                            link.style.display = 'none';
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link);
+                        } else {
+                            alert(response.data && response.data.message ? response.data.message : 'Failed to generate PDF');
+                        }
+                        downloadBtn.disabled = false;
+                        downloadBtn.textContent = originalText;
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('PDF generation error:', error);
+                        alert('Failed to generate PDF. Please try again.');
+                        downloadBtn.disabled = false;
+                        downloadBtn.textContent = originalText;
+                    }
+                });
+            };
 
             $(window).on('beforeunload', function() {
                 if (formChanged) {

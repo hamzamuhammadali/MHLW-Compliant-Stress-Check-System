@@ -66,6 +66,7 @@ class Mhlw_Stress_Check_PDF {
 	 * @param    int       $response_id    Response ID
 	 */
 	public static function output_pdf($response_id) {
+		error_log("PDF output called for response ID: " . $response_id);
 		$user_id = get_current_user_id();
 
 		// Check if user can download their own PDF
@@ -95,7 +96,9 @@ class Mhlw_Stress_Check_PDF {
 
 		// Set headers for HTML output (print-friendly)
 		header('Content-Type: text/html; charset=utf-8');
-		header('Content-Disposition: attachment; filename="stress-check-result-' . $response_id . '.html"');
+		header('Cache-Control: no-cache, no-store, must-revalidate');
+		header('Pragma: no-cache');
+		header('Expires: 0');
 
 		echo $html;
 		exit;
@@ -119,9 +122,10 @@ class Mhlw_Stress_Check_PDF {
 		), $expiration);
 
 		return add_query_arg(array(
+			'action' => 'mhlw_download_pdf',
 			'mhlw_pdf_token' => $token,
 			'response_id' => $response_id,
-		), home_url('/mhlw-pdf-download/'));
+		), admin_url('admin-ajax.php'));
 	}
 
 	/**

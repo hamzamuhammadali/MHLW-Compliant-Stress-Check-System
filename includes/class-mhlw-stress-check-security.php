@@ -240,6 +240,12 @@ class Mhlw_Stress_Check_Security {
 	 * @since    1.0.0
 	 */
 	public static function restrict_admin_access() {
+
+		// 🔥 IMPORTANT FIX
+		if ( wp_doing_ajax() ) {
+			return;
+		}
+		
 		if (!is_user_logged_in()) {
 			return;
 		}

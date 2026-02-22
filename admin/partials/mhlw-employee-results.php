@@ -13,6 +13,63 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+// Load WordPress admin scripts to ensure AJAX works
+wp_enqueue_script('mhlw-compliant-stress-check-system-admin-js', plugin_dir_url(dirname(__FILE__)) . 'js/mhlw-compliant-stress-check-system-admin.js', array('jquery'), '1.0.0', false);
+wp_localize_script('mhlw-compliant-stress-check-system-admin-js', 'mhlw_admin_ajax', array(
+	'ajax_url' => admin_url('admin-ajax.php'),
+	'nonce' => wp_create_nonce('mhlw_admin_nonce'),
+));
+
+// Add inline script to ensure downloadPDF function is available
+?>
+<script>
+jQuery(document).ready(function($) {
+    window.downloadPDF = function(responseId) {
+        var downloadBtn = document.querySelector('button[onclick*="' + responseId + '"]');
+        var originalText = downloadBtn.textContent;
+        
+        downloadBtn.disabled = true;
+        downloadBtn.textContent = 'Generating PDF...';
+        
+        $.ajax({
+            url: mhlw_admin_ajax.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'mhlw_generate_pdf',
+                response_id: responseId,
+                nonce: mhlw_admin_ajax.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    console.log('PDF generated successfully');
+                    console.log('Response:', response);
+                    console.log('PDF URL:', response.data.pdf_url);
+                    // Create direct download link instead of window.open
+                    var link = document.createElement('a');
+                    link.href = response.data.pdf_url;
+                    link.target = '_blank';
+                    link.style.display = 'none';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                } else {
+                    alert(response.data && response.data.message ? response.data.message : 'Failed to generate PDF');
+                }
+                downloadBtn.disabled = false;
+                downloadBtn.textContent = originalText;
+            },
+            error: function(xhr, status, error) {
+                console.error('PDF generation error:', error);
+                alert('Failed to generate PDF. Please try again.');
+                downloadBtn.disabled = false;
+                downloadBtn.textContent = originalText;
+            }
+        });
+    };
+});
+</script>
+<?php
+
 $user = wp_get_current_user();
 $response = Mhlw_Stress_Check_Database::get_user_response($user->ID);
 
@@ -56,9 +113,9 @@ $pdf_url = Mhlw_Stress_Check_PDF::generate_temp_url($response->id);
         </div>
         
         <div class="mhlw-actions">
-            <a href="<?php echo esc_url($pdf_url); ?>" class="button button-primary" target="_blank">
+            <button class="button button-primary" onclick="downloadPDF(<?php echo $response->id; ?>)" target="_blank">
                 <?php _e('Download PDF', 'mhlw-compliant-stress-check-system'); ?>
-            </a>
+            </button>
         </div>
     </div>
     
