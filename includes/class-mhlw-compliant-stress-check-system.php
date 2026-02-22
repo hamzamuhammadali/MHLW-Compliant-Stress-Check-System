@@ -112,6 +112,41 @@ class Mhlw_Compliant_Stress_Check_System {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mhlw-compliant-stress-check-system-i18n.php';
 
 		/**
+		 * The class responsible for defining stress check configuration.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mhlw-stress-check-config.php';
+
+		/**
+		 * The class responsible for stress check scoring logic.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mhlw-stress-check-scoring.php';
+
+		/**
+		 * The class responsible for database operations.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mhlw-stress-check-database.php';
+
+		/**
+		 * The class responsible for access control and security.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mhlw-stress-check-security.php';
+
+		/**
+		 * The class responsible for PDF generation.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mhlw-stress-check-pdf.php';
+
+		/**
+		 * The class responsible for user profile fields.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-mhlw-stress-check-user-fields.php';
+
+		/**
+		 * Debug file for AJAX testing.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'debug-ajax.php';
+
+		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-mhlw-compliant-stress-check-system-admin.php';
@@ -157,6 +192,12 @@ class Mhlw_Compliant_Stress_Check_System {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
+		// Register admin menus
+		$this->loader->add_action('admin_menu', $plugin_admin, 'register_admin_menus');
+
+		// Register admin AJAX actions
+		$this->loader->add_action('admin_init', $plugin_admin, 'register_admin_ajax');
+
 	}
 
 	/**
@@ -173,6 +214,12 @@ class Mhlw_Compliant_Stress_Check_System {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
+		// Register AJAX actions
+		$this->loader->add_action( 'init', $plugin_public, 'register_ajax_actions' );
+
+		// Initialize plugin (for PDF downloads and other early processing)
+		$this->loader->add_action( 'init', $this, 'init' );
+
 	}
 
 	/**
@@ -182,6 +229,30 @@ class Mhlw_Compliant_Stress_Check_System {
 	 */
 	public function run() {
 		$this->loader->run();
+
+		// Initialize security features
+		Mhlw_Stress_Check_Security::init();
+		
+		// Initialize user fields
+		Mhlw_Stress_Check_User_Fields::init();
+	}
+
+	/**
+	 * Initialize plugin - handle PDF downloads and other early hooks
+	 *
+	 * @since    1.0.0
+	 */
+	public function init() {
+		// Handle PDF download requests
+		if (isset($_GET['mhlw_download_pdf'])) {
+			$response_id = intval($_GET['mhlw_download_pdf']);
+			Mhlw_Stress_Check_PDF::output_pdf($response_id);
+		}
+
+		// Handle temp PDF downloads
+		if (isset($_GET['mhlw_pdf_token'])) {
+			Mhlw_Stress_Check_PDF::handle_temp_download();
+		}
 	}
 
 	/**
