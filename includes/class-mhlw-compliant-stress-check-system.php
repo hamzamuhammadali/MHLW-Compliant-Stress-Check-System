@@ -195,9 +195,6 @@ class Mhlw_Compliant_Stress_Check_System {
 		// Register admin menus
 		$this->loader->add_action('admin_menu', $plugin_admin, 'register_admin_menus');
 
-		// Register admin AJAX actions
-		$this->loader->add_action('admin_init', $plugin_admin, 'register_admin_ajax');
-
 	}
 
 	/**
@@ -213,9 +210,6 @@ class Mhlw_Compliant_Stress_Check_System {
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
-
-		// Register AJAX actions
-		$this->loader->add_action( 'init', $plugin_public, 'register_ajax_actions' );
 
 		// Initialize plugin (for PDF downloads and other early processing)
 		$this->loader->add_action( 'init', $this, 'init' );

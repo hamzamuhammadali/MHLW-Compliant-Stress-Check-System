@@ -4,7 +4,7 @@
  *
  * @since      1.0.0
  * @package    Mhlw_Compliant_Stress_Check_System
- * @subpackage Mhlw_Compliant_Stress_Check_System/public/partials
+ * @subpackage Mhlw_Compliant_Stress_Check_System/admin/partials
  */
 ?>
 
@@ -21,8 +21,6 @@
     </div>
     
     <form id="mhlw-stress-check-form" method="post">
-        <input type="hidden" name="mhlw_form_nonce" value="<?php echo wp_create_nonce('mhlw_stress_check_nonce'); ?>">
-        
         <div class="mhlw-questions-container">
             <?php 
             $current_domain = '';

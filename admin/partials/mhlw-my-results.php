@@ -4,7 +4,7 @@
  *
  * @since      1.0.0
  * @package    Mhlw_Compliant_Stress_Check_System
- * @subpackage Mhlw_Compliant_Stress_Check_System/public/partials
+ * @subpackage Mhlw_Compliant_Stress_Check_System/admin/partials
  */
 ?>
 
