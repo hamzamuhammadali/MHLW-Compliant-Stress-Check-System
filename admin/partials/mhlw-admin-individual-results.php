@@ -12,6 +12,30 @@ if (!current_user_can('mhlw_view_individual_results')) {
     wp_die(__('You do not have permission to access this page.', 'mhlw-compliant-stress-check-system'));
 }
 
+// Handle view parameter for individual result details
+$view_id = isset($_GET['view']) ? intval($_GET['view']) : 0;
+if ($view_id > 0) {
+    // Get specific response
+    $response = Mhlw_Stress_Check_Database::get_response($view_id);
+    if (!$response) {
+        wp_die(__('Response not found.', 'mhlw-compliant-stress-check-system'));
+    }
+    
+    // Get user details
+    $user = get_userdata($response->user_id);
+    $user_details = array(
+        'employee_id' => get_user_meta($response->user_id, 'mhlw_employee_id', true),
+        'department_name' => get_user_meta($response->user_id, 'mhlw_department_name', true),
+        'org_level_1' => get_user_meta($response->user_id, 'mhlw_org_level_1', true),
+    );
+    
+    // Calculate scores
+    $scores = Mhlw_Stress_Check_Scoring::calculate_scores(json_decode($response->responses, true));
+    
+    include plugin_dir_path(__FILE__) . 'mhlw-individual-detail-view.php';
+    return;
+}
+
 // Get all completed responses with user details
 global $wpdb;
 $table_responses = $wpdb->prefix . 'mhlw_stress_responses';
@@ -183,10 +207,7 @@ $responses = array_slice($responses, $offset, $per_page);
                                 ), admin_url('admin.php'))); ?>" class="button button-small">
                                     <?php _e('View Details', 'mhlw-compliant-stress-check-system'); ?>
                                 </a>
-                                <a href="<?php echo esc_url(add_query_arg(array(
-                                    'page' => 'mhlw-individual-results',
-                                    'download_pdf' => $response->id,
-                                ), admin_url('admin.php'))); ?>" class="button button-small">
+                                <a href="#" onclick="downloadPDF(<?php echo $response->id; ?>); return false;" class="button button-small">
                                     <?php _e('PDF', 'mhlw-compliant-stress-check-system'); ?>
                                 </a>
                             </td>
@@ -228,6 +249,53 @@ $responses = array_slice($responses, $offset, $per_page);
         </div>
     </div>
 </div>
+
+<script>
+jQuery(document).ready(function($) {
+    window.downloadPDF = function(responseId) {
+        var downloadBtn = event.target;
+        var originalText = downloadBtn.textContent;
+        
+        downloadBtn.disabled = true;
+        downloadBtn.textContent = 'Generating PDF...';
+        
+        $.ajax({
+            url: mhlw_admin_ajax.ajax_url,
+            type: 'POST',
+            data: {
+                action: 'mhlw_generate_pdf',
+                response_id: responseId,
+                nonce: mhlw_admin_ajax.nonce
+            },
+            success: function(response) {
+                if (response.success) {
+                    // Open in new window for printing/saving
+                    window.open(response.data.pdf_url, '_blank');
+                } else {
+                    alert(response.data && response.data.message ? response.data.message : 'Failed to generate PDF');
+                }
+                downloadBtn.disabled = false;
+                downloadBtn.textContent = originalText;
+            },
+            error: function(xhr, status, error) {
+                console.error('PDF generation error:', error);
+                alert('Failed to generate PDF. Please try again.');
+                downloadBtn.disabled = false;
+                downloadBtn.textContent = originalText;
+            }
+        });
+    };
+});
+</script>
+
+<?php
+// Load scripts for AJAX functionality
+wp_enqueue_script('mhlw-compliant-stress-check-system-admin-js', plugin_dir_url(dirname(__FILE__)) . 'js/mhlw-compliant-stress-check-system-admin.js', array('jquery'), '1.0.0', false);
+wp_localize_script('mhlw-compliant-stress-check-system-admin-js', 'mhlw_admin_ajax', array(
+	'ajax_url' => admin_url('admin-ajax.php'),
+	'nonce' => wp_create_nonce('mhlw_admin_nonce'),
+));
+?>
 
 <style>
 .mhlw-individual-results-container {

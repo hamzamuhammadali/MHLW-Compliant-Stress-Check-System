@@ -157,3 +157,47 @@ function mhlw_save_draft() {
     }
     wp_die();
 }
+
+add_action('wp_ajax_mhlw_get_group_analysis', 'mhlw_get_group_analysis');
+function mhlw_get_group_analysis() {
+    check_ajax_referer('mhlw_admin_nonce', 'nonce');
+
+    if (!current_user_can('mhlw_view_group_analysis')) {
+        wp_send_json_error(array('message' => __('Access denied.', 'mhlw-compliant-stress-check-system')));
+    }
+
+    $filter_type = isset($_POST['filter_type']) ? sanitize_text_field($_POST['filter_type']) : 'company';
+    $filter_value = isset($_POST['filter_value']) ? sanitize_text_field($_POST['filter_value']) : '';
+
+    // Get responses based on filter
+    if ($filter_type === 'company') {
+        $responses = Mhlw_Stress_Check_Database::get_all_completed_responses();
+    } elseif ($filter_type === 'department') {
+        $responses = Mhlw_Stress_Check_Database::get_responses_by_department($filter_value);
+    } else {
+        // Organization level
+        $responses = Mhlw_Stress_Check_Database::get_responses_by_organization($filter_type, $filter_value);
+    }
+
+    // Check minimum group size
+    $minimum_size = Mhlw_Stress_Check_Config::get_minimum_group_size();
+    if (count($responses) < $minimum_size) {
+        wp_send_json_success(array(
+            'show_results' => false,
+            'message' => sprintf(
+                __('This organization has fewer than %d valid responses; therefore, group analysis results cannot be displayed.', 'mhlw-compliant-stress-check-system'),
+                $minimum_size
+            ),
+            'count' => count($responses),
+        ));
+    }
+
+    // Calculate group statistics
+    $statistics = Mhlw_Stress_Check_Scoring::calculate_group_statistics(array_column($responses, 'id'));
+
+    wp_send_json_success(array(
+        'show_results' => true,
+        'statistics' => $statistics,
+        'count' => count($responses),
+    ));
+}
