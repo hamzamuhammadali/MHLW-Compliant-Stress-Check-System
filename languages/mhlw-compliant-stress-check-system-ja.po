@@ -1,300 +1,299 @@
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: MHLW–Compliant Stress Check System\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-03-05 10:46+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: \n"
-"Language: \n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"PO-Revision-Date: 2026-03-06 08:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/\n"
-"X-Loco-Version: 2.7.1; wp-6.8.2\n"
+"X-Loco-Version: 2.8.2; wp-6.9.1; php-8.2.27\n"
 "X-Domain: mhlw-compliant-stress-check-system"
 
 #: admin/partials/mhlw-admin-import.php:89
 msgid "%d employees imported successfully"
-msgstr ""
+msgstr "%d 人の従業員が正常にインポートされました"
 
 #: admin/partials/mhlw-admin-import.php:93
 msgid "%d errors"
-msgstr ""
+msgstr "%d 個のエラー"
 
 #: admin/partials/mhlw-admin-individual-results.php:224
 #, php-format
 msgid "%s items"
-msgstr ""
+msgstr "%s アイテム"
 
 #: admin/partials/mhlw-admin-group-analysis.php:44
 #: admin/partials/mhlw-admin-group-analysis.php:128
 msgid "-- Select --"
-msgstr ""
+msgstr "-- 選択 --"
 
 #. Description of the plugin
 msgid ""
 "A stress check system, fully compliant with the “Stress Check System based "
 "on the Industrial Safety and Health Act” established by the Ministry of "
 "Health, Labour and Welfare (MHLW), for internal corporate use"
-msgstr ""
+msgstr "厚生労働省が制定した「労働安全衛生法に基づくストレスチェック制度」に完全準拠した企業内向けストレスチェックシステム"
 
 #: includes/callback.php:166
 msgid "Access denied."
-msgstr ""
+msgstr "アクセスが拒否されました。"
 
 #: admin/partials/mhlw-admin-individual-results.php:169
 msgid "Actions"
-msgstr ""
+msgstr "アクション"
 
 #: includes/class-mhlw-compliant-stress-check-system-activator.php:133
 msgid "Administration - Industrial Physician/Designated Personnel"
-msgstr ""
+msgstr "管理 - 産業医/指定職員"
 
 #: admin/partials/mhlw-my-results.php:84
 msgid "Advice"
-msgstr ""
+msgstr "アドバイス"
 
 #: templates/pdf-individual-result.php:330
 #: admin/partials/mhlw-employee-results.php:196
 msgid "Advice and Recommendations"
-msgstr ""
+msgstr "アドバイスと推奨事項"
 
 #: admin/partials/mhlw-admin-individual-results.php:127
 msgid "All"
-msgstr ""
+msgstr "全て"
 
 #: includes/class-mhlw-stress-check-user-fields.php:397
 msgid "All Departments"
-msgstr ""
+msgstr "すべての部門"
 
 #: includes/class-mhlw-stress-check-user-fields.php:411
 msgid "All Status"
-msgstr ""
+msgstr "すべてのステータス"
 
 #: admin/partials/mhlw-admin-group-analysis.php:194
 msgid "An error occurred while fetching data."
-msgstr ""
+msgstr "データの取得中にエラーが発生しました。"
 
 #: admin/partials/mhlw-admin-group-analysis.php:190
 msgid "An error occurred."
-msgstr ""
+msgstr "エラーが発生しました。"
 
 #: admin/partials/mhlw-admin-group-analysis.php:65
 msgid "Analysis Results"
-msgstr ""
+msgstr "分析結果"
 
 #: admin/partials/mhlw-admin-group-analysis.php:31
 msgid "Analysis Unit:"
-msgstr ""
+msgstr "分析ユニット:"
 
 #: includes/class-mhlw-stress-check-config.php:201
 msgid "Anger"
-msgstr ""
+msgstr "怒り"
 
 #: includes/class-mhlw-stress-check-config.php:205
 msgid "Anxiety"
-msgstr ""
+msgstr "不安"
 
 #: admin/partials/mhlw-employee-dashboard.php:33
 msgid "Assessment Completed"
-msgstr ""
+msgstr "評価が完了しました"
 
 #: templates/pdf-individual-result.php:248
 #: admin/partials/mhlw-employee-results.php:112
 #: admin/partials/mhlw-individual-detail-view.php:25
 msgid "Assessment Date:"
-msgstr ""
+msgstr "評価日:"
 
 #: templates/pdf-individual-result.php:255
 msgid "Assessment Result"
-msgstr ""
+msgstr "評価結果"
 
 #: includes/class-mhlw-stress-check-user-fields.php:126
 #: includes/class-mhlw-stress-check-user-fields.php:152
 msgid "Assessment Status"
-msgstr ""
+msgstr "評価ステータス"
 
 #: templates/pdf-individual-result.php:313
 #: admin/partials/mhlw-employee-results.php:179
 #: admin/partials/mhlw-my-results.php:66
 msgid "Average Score"
-msgstr ""
+msgstr "平均点"
 
 #: admin/partials/mhlw-admin-group-analysis.php:216
 msgid "Average Scores"
-msgstr ""
+msgstr "平均スコア"
 
 #: admin/partials/mhlw-individual-detail-view.php:53
 msgid "Back to List"
-msgstr ""
+msgstr "リストに戻る"
 
 #: templates/pdf-individual-result.php:332
 #: admin/partials/mhlw-employee-results.php:198
 msgid "Based on Your Results"
-msgstr ""
+msgstr "結果に基づいて"
 
 #: admin/partials/mhlw-admin-group-analysis.php:34
 msgid "By Department"
-msgstr ""
+msgstr "部門別"
 
 #: admin/partials/mhlw-admin-group-analysis.php:35
 msgid "By Organization Level 1"
-msgstr ""
+msgstr "組織レベル1別"
 
 #: admin/partials/mhlw-admin-group-analysis.php:36
 msgid "By Organization Level 2"
-msgstr ""
+msgstr "組織レベル2別"
 
 #: admin/partials/mhlw-admin-group-analysis.php:37
 msgid "By Organization Level 3"
-msgstr ""
+msgstr "組織レベル3別"
 
 #: admin/partials/mhlw-my-results.php:18
 msgid "Classification: High-Stress Individual"
-msgstr ""
+msgstr "分類: 高ストレス者"
 
 #: admin/partials/mhlw-my-results.php:20
 msgid "Classification: Not Applicable"
-msgstr ""
+msgstr "分類: 該当なし"
 
 #: admin/partials/mhlw-admin-individual-results.php:142
 msgid "Clear Filters"
-msgstr ""
+msgstr "フィルターをクリアする"
 
 #: admin/partials/mhlw-admin-import.php:26
 msgid "Column"
-msgstr ""
+msgstr "カラム"
 
 #: admin/partials/mhlw-my-results.php:50
 msgid "Combined A + C"
-msgstr ""
+msgstr "A + Cの組み合わせ"
 
 #: templates/pdf-individual-result.php:301
 #: admin/partials/mhlw-employee-results.php:164
 msgid "Combined Domain A + C Score:"
-msgstr ""
+msgstr "ドメインA + Cの総合スコア:"
 
 #: admin/partials/mhlw-admin-group-analysis.php:33
 msgid "Company-wide"
-msgstr ""
+msgstr "全社"
 
 #: includes/class-mhlw-stress-check-user-fields.php:129
 #: includes/class-mhlw-stress-check-user-fields.php:412
 msgid "Completed"
-msgstr ""
+msgstr "完了しました"
 
 #: admin/partials/mhlw-admin-dashboard.php:39
 msgid "Completed Assessments"
-msgstr ""
+msgstr "完了した評価"
 
 #: includes/class-mhlw-stress-check-user-fields.php:132
 #, php-format
 msgid "Completed on %s"
-msgstr ""
+msgstr "%sに完了"
 
 #: admin/partials/mhlw-my-results.php:27
 #, php-format
 msgid "Completed on: %s"
-msgstr ""
+msgstr "完了日時: %s"
 
 #: admin/partials/mhlw-admin-dashboard.php:98
 #: admin/partials/mhlw-admin-individual-results.php:164
 msgid "Completion Date"
-msgstr ""
+msgstr "完了日"
 
 #: templates/pdf-individual-result.php:229
 msgid "CONFIDENTIAL - For Personal Use Only"
-msgstr ""
+msgstr "機密 - 個人使用のみ"
 
 #: admin/partials/mhlw-admin-individual-results.php:246
 #: admin/partials/mhlw-individual-detail-view.php:63
 msgid "Confidentiality Notice:"
-msgstr ""
+msgstr "機密保持に関する通知:"
 
 #: includes/class-mhlw-stress-check-scoring.php:153
 msgid ""
 "Continue to maintain a healthy work-life balance and utilize available "
 "support resources when needed."
-msgstr ""
+msgstr "健全なワークライフバランスを維持し、必要に応じて利用可能なサポート リソースを活用します。"
 
 #: includes/class-mhlw-stress-check-config.php:221
 msgid "Coworker Support"
-msgstr ""
+msgstr "同僚のサポート"
 
 #: includes/class-mhlw-stress-check-scoring.php:124
 msgid "Criterion (a): Domain B score indicates high stress"
-msgstr ""
+msgstr "基準（a）：ドメインBのスコアは高いストレスを示している"
 
 #: includes/class-mhlw-stress-check-scoring.php:131
 msgid ""
 "Criterion (b): Combined Domain A+C and Domain B scores indicate high stress"
-msgstr ""
+msgstr "基準（b）：領域A+Cと領域Bのスコアの組み合わせは、高いストレスを示している"
 
 #: admin/partials/mhlw-admin-group-analysis.php:257
 msgid "CSV export functionality will be implemented here."
-msgstr ""
+msgstr "ここでCSVエクスポート機能が実装されます。"
 
 #: admin/partials/mhlw-admin-import.php:117
 msgid "CSV File"
-msgstr ""
+msgstr "CSVファイル"
 
 #: admin/partials/mhlw-admin-import.php:20
 msgid "CSV File Format"
-msgstr ""
+msgstr "CSVファイル形式"
 
 #: admin/partials/mhlw-admin-import.php:134
 msgid "Current Employee Count"
-msgstr ""
+msgstr "現在の従業員数"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:102
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:103
 msgid "Dashboard"
-msgstr ""
+msgstr "ダッシュボード"
 
 #: includes/class-mhlw-stress-check-user-fields.php:348
 #: admin/partials/mhlw-admin-individual-results.php:162
 msgid "Department"
-msgstr ""
+msgstr "部門"
 
 #: includes/class-mhlw-stress-check-user-fields.php:87
 msgid "Department display name"
-msgstr ""
+msgstr "部門表示名"
 
 #: includes/class-mhlw-stress-check-user-fields.php:74
 #: includes/class-mhlw-stress-check-user-fields.php:259
 msgid "Department ID"
-msgstr ""
+msgstr "部門ID"
 
 #: includes/class-mhlw-stress-check-user-fields.php:83
 #: includes/class-mhlw-stress-check-user-fields.php:266
 msgid "Department Name"
-msgstr ""
+msgstr "部署名"
 
 #: admin/partials/mhlw-admin-import.php:49
 msgid "Department name"
-msgstr ""
+msgstr "部署名"
 
 #: includes/class-mhlw-stress-check-user-fields.php:395
 #: templates/pdf-individual-result.php:244
 #: admin/partials/mhlw-employee-results.php:111
 #: admin/partials/mhlw-individual-detail-view.php:23
 msgid "Department:"
-msgstr ""
+msgstr "部門："
 
 #: admin/partials/mhlw-admin-dashboard.php:49
 msgid "Departments"
-msgstr ""
+msgstr "Departments"
 
 #: includes/class-mhlw-stress-check-config.php:209
 msgid "Depression"
-msgstr ""
+msgstr "うつ"
 
 #: admin/partials/mhlw-admin-import.php:27
 msgid "Description"
-msgstr ""
+msgstr "説明"
 
 #: templates/pdf-individual-result.php:283
 #: admin/partials/mhlw-admin-group-analysis.php:210
@@ -303,20 +302,20 @@ msgstr ""
 #: admin/partials/mhlw-employee-results.php:147
 #: admin/partials/mhlw-individual-detail-view.php:36
 msgid "Domain A"
-msgstr ""
+msgstr "ドメインA"
 
 #: admin/partials/mhlw-my-results.php:38
 msgid "Domain A (Job Stressors)"
-msgstr ""
+msgstr "領域A（仕事のストレス要因）"
 
 #: admin/partials/mhlw-admin-group-analysis.php:84
 msgid "Domain A Average"
-msgstr ""
+msgstr "ドメインAの平均"
 
 #: includes/class-mhlw-stress-check-config.php:249
 #: admin/partials/mhlw-stress-check-form.php:32
 msgid "Domain A: Job Stressors"
-msgstr ""
+msgstr "領域A：仕事のストレス要因"
 
 #: templates/pdf-individual-result.php:288
 #: admin/partials/mhlw-admin-group-analysis.php:211
@@ -325,20 +324,20 @@ msgstr ""
 #: admin/partials/mhlw-employee-results.php:152
 #: admin/partials/mhlw-individual-detail-view.php:40
 msgid "Domain B"
-msgstr ""
+msgstr "ドメインB"
 
 #: admin/partials/mhlw-my-results.php:42
 msgid "Domain B (Stress Reactions)"
-msgstr ""
+msgstr "ドメインB（ストレス反応）"
 
 #: admin/partials/mhlw-admin-group-analysis.php:88
 msgid "Domain B Average"
-msgstr ""
+msgstr "ドメイン B の平均"
 
 #: includes/class-mhlw-stress-check-config.php:250
 #: admin/partials/mhlw-stress-check-form.php:33
 msgid "Domain B: Stress Reactions"
-msgstr ""
+msgstr "領域B：ストレス反応"
 
 #: templates/pdf-individual-result.php:293
 #: admin/partials/mhlw-admin-group-analysis.php:212
@@ -347,141 +346,141 @@ msgstr ""
 #: admin/partials/mhlw-employee-results.php:157
 #: admin/partials/mhlw-individual-detail-view.php:44
 msgid "Domain C"
-msgstr ""
+msgstr "ドメインC"
 
 #: admin/partials/mhlw-my-results.php:46
 msgid "Domain C (Social Support)"
-msgstr ""
+msgstr "領域C（社会的支援）"
 
 #: admin/partials/mhlw-admin-group-analysis.php:92
 msgid "Domain C Average"
-msgstr ""
+msgstr "ドメイン C の平均"
 
 #: includes/class-mhlw-stress-check-config.php:251
 msgid "Domain C: Social Support"
-msgstr ""
+msgstr "領域C: 社会的支援"
 
 #: admin/partials/mhlw-stress-check-form.php:34
 msgid "Domain C: Social Support & Other Factors"
-msgstr ""
+msgstr "領域C: 社会的支援とその他の要因"
 
 #: templates/pdf-individual-result.php:280
 #: admin/partials/mhlw-employee-results.php:144
 #: admin/partials/mhlw-my-results.php:35
 msgid "Domain Scores"
-msgstr ""
+msgstr "ドメインスコア"
 
 #: admin/partials/mhlw-admin-group-analysis.php:107
 msgid "Download CSV"
-msgstr ""
+msgstr "CSVをダウンロード"
 
 #: admin/partials/mhlw-employee-results.php:117
 #: admin/partials/mhlw-individual-detail-view.php:56
 #: admin/partials/mhlw-my-results.php:90
 msgid "Download PDF"
-msgstr ""
+msgstr "PDFをダウンロード"
 
 #: admin/partials/mhlw-employee-dashboard.php:98
 #: admin/partials/mhlw-stress-check-form.php:20
 msgid "Draft saved"
-msgstr ""
+msgstr "下書きが保存されました"
 
 #: includes/callback.php:154
 msgid "Draft saved successfully."
-msgstr ""
+msgstr "下書きが正常に保存されました。"
 
 #: includes/class-mhlw-stress-check-config.php:26
 msgid "During working hours, I must constantly think about work."
-msgstr ""
+msgstr "勤務時間中は常に仕事のことを考えなければなりません。"
 
 #: admin/partials/mhlw-admin-dashboard.php:97
 msgid "Employee"
-msgstr ""
+msgstr "従業員"
 
 #: admin/partials/mhlw-admin-import.php:39
 msgid "Employee full name"
-msgstr ""
+msgstr "従業員のフルネーム"
 
 #: includes/class-mhlw-stress-check-user-fields.php:65
 #: includes/class-mhlw-stress-check-user-fields.php:251
 #: includes/class-mhlw-stress-check-user-fields.php:347
 #: admin/partials/mhlw-admin-individual-results.php:160
 msgid "Employee ID"
-msgstr ""
+msgstr "従業員ID"
 
 #: admin/partials/mhlw-admin-individual-results.php:120
 msgid "Employee ID or Name"
-msgstr ""
+msgstr "従業員IDまたは氏名"
 
 #: templates/pdf-individual-result.php:236
 #: admin/partials/mhlw-employee-results.php:110
 #: admin/partials/mhlw-individual-detail-view.php:21
 msgid "Employee ID:"
-msgstr ""
+msgstr "従業員ID:"
 
 #: templates/pdf-individual-result.php:233
 msgid "Employee Information"
-msgstr ""
+msgstr "従業員情報"
 
 #: admin/partials/mhlw-admin-import.php:100
 msgid "Error Details"
-msgstr ""
+msgstr "エラーの詳細"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:237
 msgid "Error reading CSV file."
-msgstr ""
+msgstr "CSV ファイルの読み取り中にエラーが発生しました。"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:224
 msgid "Error uploading CSV file."
-msgstr ""
+msgstr "CSV ファイルのアップロード中にエラーが発生しました。"
 
 #: admin/partials/mhlw-admin-group-analysis.php:105
 msgid "Export Data"
-msgstr ""
+msgstr "データのエクスポート"
 
 #: includes/callback.php:156
 msgid "Failed to save draft."
-msgstr ""
+msgstr "下書きを保存できませんでした。"
 
 #: includes/callback.php:123
 msgid "Failed to save responses. Please try again."
-msgstr ""
+msgstr "回答を保存できませんでした。もう一度お試しください。"
 
 #: includes/class-mhlw-stress-check-config.php:225
 msgid "Family and Friend Support"
-msgstr ""
+msgstr "家族や友人のサポート"
 
 #: includes/class-mhlw-stress-check-config.php:197
 msgid "Fatigue"
-msgstr ""
+msgstr "倦怠感"
 
 #: admin/partials/mhlw-admin-individual-results.php:138
 msgid "Filter"
-msgstr ""
+msgstr "フィルター"
 
 #: admin/partials/mhlw-admin-group-analysis.php:27
 msgid "Filter Options"
-msgstr ""
+msgstr "フィルターオプション"
 
 #: includes/class-mhlw-compliant-stress-check-system-activator.php:149
 msgid "General Administration - Department Manager"
-msgstr ""
+msgstr "一般管理 - 部門マネージャー"
 
 #: admin/partials/mhlw-admin-group-analysis.php:49
 msgid "Generate Analysis"
-msgstr ""
+msgstr "分析の生成"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:120
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:121
 #: admin/partials/mhlw-admin-group-analysis.php:23
 msgid "Group Analysis"
-msgstr ""
+msgstr "グループ分析"
 
 #: admin/partials/mhlw-admin-group-analysis.php:57
 msgid ""
 "Group analysis results are only displayed for organizations with %d or more "
 "valid responses to prevent personal identification."
-msgstr ""
+msgstr "グループ分析の結果は、個人の特定を防ぐため、有効な回答が %d 件以上ある組織に対してのみ表示されます。"
 
 #: includes/class-mhlw-stress-check-user-fields.php:141
 #: includes/class-mhlw-stress-check-user-fields.php:374
@@ -490,69 +489,69 @@ msgstr ""
 #: admin/partials/mhlw-admin-individual-results.php:130
 #: admin/partials/mhlw-admin-individual-results.php:195
 msgid "High Stress"
-msgstr ""
+msgstr "高いストレス"
 
 #: admin/partials/mhlw-admin-group-analysis.php:213
 msgid "High-Stress %"
-msgstr ""
+msgstr "高ストレス％"
 
 #: templates/pdf-individual-result.php:261
 #: admin/partials/mhlw-employee-dashboard.php:46
 #: admin/partials/mhlw-employee-results.php:126
 #: admin/partials/mhlw-individual-detail-view.php:31
 msgid "High-Stress Individual"
-msgstr ""
+msgstr "高ストレス者"
 
 #: admin/partials/mhlw-admin-dashboard.php:54
 msgid "High-Stress Individuals"
-msgstr ""
+msgstr "高ストレスの個人"
 
 #: admin/partials/mhlw-admin-group-analysis.php:80
 msgid "High-Stress Rate"
-msgstr ""
+msgstr "高ストレス率"
 
 #: includes/class-mhlw-stress-check-config.php:68
 msgid ""
 "How much support do your coworkers provide when you are having difficulties?"
-msgstr ""
+msgstr "あなたが困難に直面しているとき、同僚はどの程度サポートしてくれますか?"
 
 #: includes/class-mhlw-stress-check-config.php:73
 msgid ""
 "How much support do your family members or friends provide when you are "
 "having difficulties?"
-msgstr ""
+msgstr "あなたが困難に直面しているとき、家族や友人はどの程度サポートしてくれますか？"
 
 #: includes/class-mhlw-stress-check-config.php:65
 msgid ""
 "How much support does your supervisor provide when you are having "
 "difficulties?"
-msgstr ""
+msgstr "あなたが困難に直面しているとき、上司はどの程度サポートしてくれますか?"
 
 #: includes/class-mhlw-stress-check-config.php:66
 msgid "How reliable are your coworkers when you are troubled?"
-msgstr ""
+msgstr "困ったとき、同僚はどれくらい頼りになりますか?"
 
 #: includes/class-mhlw-stress-check-config.php:71
 msgid "How reliable are your family members or friends when you are troubled?"
-msgstr ""
+msgstr "あなたが困ったとき、家族や友人はどれくらい頼りになりますか？"
 
 #: includes/class-mhlw-stress-check-config.php:63
 msgid "How reliable is your supervisor when you are troubled?"
-msgstr ""
+msgstr "困ったときに上司はどれくらい頼りになりますか?"
 
 #: includes/class-mhlw-stress-check-config.php:67
 msgid "How well do your coworkers listen to you when you consult them?"
-msgstr ""
+msgstr "同僚に相談したとき、彼らはあなたの話をどれくらいよく聞いてくれますか?"
 
 #: includes/class-mhlw-stress-check-config.php:72
 msgid ""
 "How well do your family members or friends listen to you when you consult "
 "them?"
-msgstr ""
+msgstr "あなたが相談したとき、家族や友人はあなたの話をどれくらいよく聞いてくれますか?"
 
 #: includes/class-mhlw-stress-check-config.php:64
 msgid "How well does your supervisor listen to you when you consult them?"
-msgstr ""
+msgstr "あなたの上司は、あなたが相談したとき、どれくらいあなたの話に耳を傾けてくれますか?"
 
 #. URI of the plugin
 msgid "https://https://www.linkedin.com/in/muhammad-ali-hamza-0b71281a3/"
@@ -564,163 +563,163 @@ msgstr ""
 
 #: includes/class-mhlw-stress-check-config.php:75
 msgid "I am satisfied with my family life."
-msgstr ""
+msgstr "私は家族との生活に満足しています。"
 
 #: includes/class-mhlw-stress-check-config.php:74
 msgid "I am satisfied with my job."
-msgstr ""
+msgstr "私は自分の仕事に満足しています。"
 
 #: includes/class-mhlw-stress-check-config.php:81
 msgid "I am satisfied with my overall life."
-msgstr ""
+msgstr "私は自分の人生全般に満足しています。"
 
 #: includes/class-mhlw-stress-check-config.php:77
 msgid "I am satisfied with my work performance."
-msgstr ""
+msgstr "私は自分の仕事のパフォーマンスに満足しています。"
 
 #: includes/class-mhlw-stress-check-config.php:80
 msgid "I am satisfied with my workplace."
-msgstr ""
+msgstr "私は職場に満足しています。"
 
 #: includes/class-mhlw-stress-check-config.php:79
 msgid "I am worried about losing my job."
-msgstr ""
+msgstr "仕事を失うのではないかと心配しています。"
 
 #: includes/class-mhlw-stress-check-config.php:29
 msgid "I can decide the order and method of my work on my own."
-msgstr ""
+msgstr "仕事の順番ややり方は自分で決められます。"
 
 #: includes/class-mhlw-stress-check-config.php:30
 msgid "I can reflect my opinions in workplace policies."
-msgstr ""
+msgstr "職場の方針に自分の意見を反映させることができます。"
 
 #: includes/class-mhlw-stress-check-config.php:28
 msgid "I can work at my own pace."
-msgstr ""
+msgstr "自分のペースで仕事ができます。"
 
 #: includes/class-mhlw-stress-check-config.php:22
 msgid "I cannot finish my work within working hours."
-msgstr ""
+msgstr "勤務時間内に仕事を終えることができません。"
 
 #: includes/class-mhlw-stress-check-config.php:59
 msgid "I experience palpitations or shortness of breath."
-msgstr ""
+msgstr "動悸や息切れを感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:47
 msgid "I feel angry."
-msgstr ""
+msgstr "怒りを感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:49
 msgid "I feel anxious."
-msgstr ""
+msgstr "不安を感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:54
 msgid "I feel blue."
-msgstr ""
+msgstr "憂鬱です。"
 
 #: includes/class-mhlw-stress-check-config.php:52
 msgid "I feel depressed."
-msgstr ""
+msgstr "気分が落ち込んでいます。"
 
 #: includes/class-mhlw-stress-check-config.php:48
 msgid "I feel easily annoyed."
-msgstr ""
+msgstr "私はすぐにイライラしてしまいます。"
 
 #: includes/class-mhlw-stress-check-config.php:42
 msgid "I feel enthusiastic about working."
-msgstr ""
+msgstr "仕事に対して熱意を感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:44
 msgid "I feel exhausted."
-msgstr ""
+msgstr "疲れを感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:43
 msgid "I feel extremely tired."
-msgstr ""
+msgstr "とても疲れています。"
 
 #: includes/class-mhlw-stress-check-config.php:58
 msgid "I feel eye strain."
-msgstr ""
+msgstr "目の疲れを感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:40
 msgid "I feel full of energy."
-msgstr ""
+msgstr "エネルギーが満ち溢れている気がします。"
 
 #: includes/class-mhlw-stress-check-config.php:53
 msgid "I feel gloomy."
-msgstr ""
+msgstr "気分が憂鬱です。"
 
 #: includes/class-mhlw-stress-check-config.php:46
 msgid "I feel irritated."
-msgstr ""
+msgstr "イライラします。"
 
 #: includes/class-mhlw-stress-check-config.php:45
 msgid "I feel listless."
-msgstr ""
+msgstr "だるさを感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:41
 msgid "I feel lively."
-msgstr ""
+msgstr "元気が出ました。"
 
 #: includes/class-mhlw-stress-check-config.php:78
 msgid "I feel my job is secure."
-msgstr ""
+msgstr "私の仕事は安定していると感じています。"
 
 #: includes/class-mhlw-stress-check-config.php:51
 msgid "I feel restless."
-msgstr ""
+msgstr "落ち着かない気分です。"
 
 #: includes/class-mhlw-stress-check-config.php:56
 msgid "I feel stiff in my shoulders or have neck pain."
-msgstr ""
+msgstr "肩が凝ったり首が痛くなったりします。"
 
 #: includes/class-mhlw-stress-check-config.php:37
 msgid "I feel that my work is worthwhile."
-msgstr ""
+msgstr "自分の仕事には価値があると感じています。"
 
 #: includes/class-mhlw-stress-check-config.php:50
 msgid "I feel uneasy."
-msgstr ""
+msgstr "不安を感じます。"
 
 #: includes/class-mhlw-stress-check-config.php:76
 msgid "I have been bullied or harassed at work."
-msgstr ""
+msgstr "職場でいじめや嫌がらせを受けたことがあります。"
 
 #: includes/class-mhlw-stress-check-config.php:62
 msgid "I have difficulty sleeping."
-msgstr ""
+msgstr "眠るのが困難です。"
 
 #: includes/class-mhlw-stress-check-config.php:31
 msgid "I have few opportunities to use my skills or knowledge at work."
-msgstr ""
+msgstr "仕事で自分のスキルや知識を活用する機会がほとんどありません。"
 
 #: includes/class-mhlw-stress-check-config.php:55
 msgid "I have headaches or feel heaviness in my head."
-msgstr ""
+msgstr "頭痛がしたり、頭が重く感じたりします。"
 
 #: includes/class-mhlw-stress-check-config.php:57
 msgid "I have lower back pain."
-msgstr ""
+msgstr "腰が痛いです。"
 
 #: includes/class-mhlw-stress-check-config.php:61
 msgid "I have poor appetite."
-msgstr ""
+msgstr "食欲がありません。"
 
 #: includes/class-mhlw-stress-check-config.php:60
 msgid "I have stomach or intestinal problems."
-msgstr ""
+msgstr "胃や腸に問題があります。"
 
 #: includes/class-mhlw-stress-check-config.php:21
 msgid "I have to do an extremely large amount of work."
-msgstr ""
+msgstr "非常に大量の仕事をしなければなりません。"
 
 #: includes/class-mhlw-stress-check-config.php:23
 msgid "I have to work very hard."
-msgstr ""
+msgstr "とても一生懸命働かなければなりません。"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:336
 msgid "Import complete. %d employees imported, %d errors."
-msgstr ""
+msgstr "インポートが完了しました。%d 人の従業員がインポートされましたが、%d 件のエラーが発生しました。"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:111
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:112
@@ -728,72 +727,72 @@ msgstr ""
 #: admin/partials/mhlw-admin-import.php:16
 #: admin/partials/mhlw-admin-import.php:129
 msgid "Import Employees"
-msgstr ""
+msgstr "従業員のインポート"
 
 #: admin/partials/mhlw-admin-import.php:86
 msgid "Import Results"
-msgstr ""
+msgstr "インポート結果"
 
 #: admin/partials/mhlw-individual-detail-view.php:17
 msgid "Individual Result Details"
-msgstr ""
+msgstr "個人結果詳細"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:129
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:130
 #: admin/partials/mhlw-admin-individual-results.php:109
 msgid "Individual Results"
-msgstr ""
+msgstr "個人成績"
 
 #: includes/callback.php:55 includes/class-mhlw-stress-check-pdf.php:138
 msgid "Invalid download link."
-msgstr ""
+msgstr "ダウンロードリンクが無効です。"
 
 #: includes/class-mhlw-stress-check-security.php:343
 msgid "Invalid login credentials."
-msgstr ""
+msgstr "ログイン資格情報が無効です。"
 
 #: includes/callback.php:23
 msgid "Invalid response ID."
-msgstr ""
+msgstr "応答 ID が無効です。"
 
 #: includes/class-mhlw-stress-check-config.php:177
 msgid "Job Control"
-msgstr ""
+msgstr "ジョブ制御"
 
 #: includes/class-mhlw-stress-check-config.php:189
 msgid "Job Satisfaction"
-msgstr ""
+msgstr "仕事の満足度"
 
 #: templates/pdf-individual-result.php:283
 #: admin/partials/mhlw-employee-results.php:147
 msgid "Job Stressors"
-msgstr ""
+msgstr "仕事のストレス要因"
 
 #: includes/class-mhlw-stress-check-user-fields.php:114
 #: admin/partials/mhlw-admin-import.php:64
 msgid "Lower-level organization (e.g., Section)"
-msgstr ""
+msgstr "下位組織（例：セクション）"
 
 #: admin/partials/mhlw-admin-import.php:122
 msgid "Maximum file size: "
-msgstr ""
+msgstr "最大ファイルサイズ:"
 
 #: includes/class-mhlw-stress-check-user-fields.php:62
 msgid "MHLW Stress Check Information"
-msgstr ""
+msgstr "厚生労働省ストレスチェック情報"
 
 #. Name of the plugin
 msgid "MHLW–Compliant Stress Check System"
-msgstr ""
+msgstr "厚生労働省準拠のストレスチェック制度"
 
 #: includes/class-mhlw-stress-check-user-fields.php:105
 #: admin/partials/mhlw-admin-import.php:59
 msgid "Mid-level organization (e.g., Branch)"
-msgstr ""
+msgstr "中間レベルの組織（例：支店）"
 
 #: includes/class-mhlw-stress-check-config.php:95
 msgid "Mostly Yes"
-msgstr ""
+msgstr "ほとんどの場合はい"
 
 #. Author of the plugin
 msgid "Muhammad Ali HAMZA"
@@ -801,37 +800,37 @@ msgstr ""
 
 #: includes/class-mhlw-stress-check-config.php:25
 msgid "My job is difficult and requires advanced knowledge and skills."
-msgstr ""
+msgstr "私の仕事は難しく、高度な知識とスキルが必要です。"
 
 #: includes/class-mhlw-stress-check-config.php:36
 msgid "My job is meaningful."
-msgstr ""
+msgstr "私の仕事は有意義です。"
 
 #: includes/class-mhlw-stress-check-config.php:32
 msgid "My job is not well suited to me."
-msgstr ""
+msgstr "私の仕事は私にあまり向いていません。"
 
 #: includes/class-mhlw-stress-check-config.php:24
 msgid "My job requires a great deal of concentration."
-msgstr ""
+msgstr "私の仕事には多大な集中力が必要です。"
 
 #: includes/class-mhlw-stress-check-config.php:27
 msgid "My job requires a great deal of physical effort."
-msgstr ""
+msgstr "私の仕事にはかなりの肉体的労力が必要です。"
 
 #: admin/partials/mhlw-employee-results.php:79
 #: admin/partials/mhlw-employee-results.php:106
 msgid "My Results"
-msgstr ""
+msgstr "私の結果"
 
 #: admin/partials/mhlw-admin-individual-results.php:161
 msgid "Name"
-msgstr ""
+msgstr "名前"
 
 #: templates/pdf-individual-result.php:240
 #: admin/partials/mhlw-individual-detail-view.php:22
 msgid "Name:"
-msgstr ""
+msgstr "名前："
 
 #: includes/class-mhlw-stress-check-config.php:93
 #: admin/partials/mhlw-admin-import.php:40
@@ -840,22 +839,22 @@ msgstr ""
 #: admin/partials/mhlw-admin-import.php:60
 #: admin/partials/mhlw-admin-import.php:65
 msgid "No"
-msgstr ""
+msgstr "いいえ"
 
 #: admin/partials/mhlw-admin-dashboard.php:119
 msgid "No completed assessments yet."
-msgstr ""
+msgstr "まだ完了した評価はありません。"
 
 #: admin/partials/mhlw-admin-individual-results.php:176
 msgid "No results found."
-msgstr ""
+msgstr "結果が見つかりませんでした。"
 
 #: includes/class-mhlw-stress-check-user-fields.php:376
 #: admin/partials/mhlw-admin-dashboard.php:111
 #: admin/partials/mhlw-admin-individual-results.php:133
 #: admin/partials/mhlw-admin-individual-results.php:199
 msgid "Normal"
-msgstr ""
+msgstr "普通"
 
 #: includes/class-mhlw-stress-check-user-fields.php:145
 #: templates/pdf-individual-result.php:263
@@ -863,287 +862,287 @@ msgstr ""
 #: admin/partials/mhlw-employee-results.php:128
 #: admin/partials/mhlw-individual-detail-view.php:31
 msgid "Not Applicable"
-msgstr ""
+msgstr "適用できない"
 
 #: includes/class-mhlw-stress-check-user-fields.php:155
 #: includes/class-mhlw-stress-check-user-fields.php:379
 #: includes/class-mhlw-stress-check-user-fields.php:413
 msgid "Not Started"
-msgstr ""
+msgstr "未開始"
 
 #: admin/partials/mhlw-admin-group-analysis.php:55
 msgid "Note:"
-msgstr ""
+msgstr "注記："
 
 #: admin/partials/mhlw-admin-individual-results.php:163
 msgid "Organization"
-msgstr ""
+msgstr "組織"
 
 #: includes/class-mhlw-stress-check-user-fields.php:92
 #: includes/class-mhlw-stress-check-user-fields.php:273
 msgid "Organization Level 1"
-msgstr ""
+msgstr "組織レベル 1"
 
 #: includes/class-mhlw-stress-check-user-fields.php:101
 #: includes/class-mhlw-stress-check-user-fields.php:280
 msgid "Organization Level 2"
-msgstr ""
+msgstr "組織レベル 2"
 
 #: includes/class-mhlw-stress-check-user-fields.php:110
 #: includes/class-mhlw-stress-check-user-fields.php:287
 msgid "Organization Level 3"
-msgstr ""
+msgstr "組織レベル 3"
 
 #: admin/partials/mhlw-individual-detail-view.php:24
 msgid "Organization:"
-msgstr ""
+msgstr "組織："
 
 #: admin/partials/mhlw-individual-detail-view.php:30
 msgid "Overall Status"
-msgstr ""
+msgstr "全体的なステータス"
 
 #: admin/partials/mhlw-admin-dashboard.php:44
 msgid "Participation Rate"
-msgstr ""
+msgstr "参加率"
 
 #: includes/class-mhlw-stress-check-security.php:320
 msgid "Password must be at least 8 characters long."
-msgstr ""
+msgstr "パスワードは 8 文字以上である必要があります。"
 
 #: includes/class-mhlw-stress-check-security.php:326
 msgid "Password must contain both letters and numbers."
-msgstr ""
+msgstr "パスワードには文字と数字の両方を含める必要があります。"
 
 #: admin/partials/mhlw-admin-individual-results.php:211
 msgid "PDF"
-msgstr ""
+msgstr "PDF"
 
 #: includes/callback.php:47
 msgid "PDF generated successfully."
-msgstr ""
+msgstr "PDF が正常に生成されました。"
 
 #: includes/class-mhlw-stress-check-config.php:173
 msgid "Physical Job Demand"
-msgstr ""
+msgstr "物理的な仕事の需要"
 
 #: includes/class-mhlw-stress-check-config.php:213
 msgid "Physical Symptoms"
-msgstr ""
+msgstr "身体的症状"
 
 #: includes/callback.php:91 includes/callback.php:107
 msgid "Please answer all 57 questions before submitting."
-msgstr ""
+msgstr "提出する前に57の質問すべてに回答してください。"
 
 #: includes/callback.php:17 includes/callback.php:82 includes/callback.php:133
 msgid "Please log in."
-msgstr ""
+msgstr "ログインしてください。"
 
 #: admin/partials/mhlw-admin-group-analysis.php:153
 msgid "Please select a filter value."
-msgstr ""
+msgstr "フィルター値を選択してください。"
 
 #: includes/class-mhlw-stress-check-scoring.php:146
 msgid ""
 "Please take care of your health and consider discussing your workload and "
 "work environment with your supervisor."
-msgstr ""
+msgstr "健康に気を配り、仕事量や職場環境について上司と話し合うことを検討してください。"
 
 #: includes/class-mhlw-stress-check-config.php:169
 msgid "Psychological Job Demand"
-msgstr ""
+msgstr "心理的な仕事の需要"
 
 #: admin/partials/mhlw-admin-dashboard.php:62
 msgid "Quick Actions"
-msgstr ""
+msgstr "クイックアクション"
 
 #: admin/partials/mhlw-admin-dashboard.php:79
 msgid "Recent Activity"
-msgstr ""
+msgstr "最近の活動"
 
 #: templates/pdf-individual-result.php:339
 #, php-format
 msgid "Report ID: SC-%s | Generated: %s"
-msgstr ""
+msgstr "レポートID: SC-%s | 生成日時: %s"
 
 #: admin/partials/mhlw-admin-import.php:28
 msgid "Required"
-msgstr ""
+msgstr "必須"
 
 #: includes/class-mhlw-stress-check-user-fields.php:254
 msgid "Required for employees"
-msgstr ""
+msgstr "従業員に必須"
 
 #: includes/callback.php:30 includes/class-mhlw-stress-check-pdf.php:29
 #: includes/class-mhlw-stress-check-pdf.php:80
 #: admin/partials/mhlw-admin-individual-results.php:21
 msgid "Response not found."
-msgstr ""
+msgstr "応答が見つかりません。"
 
 #: includes/class-mhlw-stress-check-user-fields.php:137
 msgid "Result"
-msgstr ""
+msgstr "結果"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:149
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:150
 msgid "Results"
-msgstr ""
+msgstr "結果"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:299
 #, php-format
 msgid "Row %d: Error creating user - %s"
-msgstr ""
+msgstr "行 %d: ユーザーの作成中にエラーが発生しました - %s"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:268
 msgid "Row %d: Missing required fields"
-msgstr ""
+msgstr "行 %d: 必須フィールドがありません"
 
 #: admin/partials/mhlw-admin-import.php:71
 msgid "Sample CSV Data"
-msgstr ""
+msgstr "サンプルCSVデータ"
 
 #: admin/partials/mhlw-employee-dashboard.php:140
 #: admin/partials/mhlw-stress-check-form.php:66
 msgid "Save Draft"
-msgstr ""
+msgstr "ドラフトの保存"
 
 #: templates/pdf-individual-result.php:312
 #: admin/partials/mhlw-employee-results.php:178
 #: admin/partials/mhlw-my-results.php:65
 msgid "Scale"
-msgstr ""
+msgstr "規模"
 
 #: templates/pdf-individual-result.php:308
 #: admin/partials/mhlw-employee-results.php:170
 #: admin/partials/mhlw-my-results.php:57
 msgid "Scale Breakdown"
-msgstr ""
+msgstr "規模の内訳"
 
 #: admin/partials/mhlw-admin-group-analysis.php:98
 msgid "Score Distribution"
-msgstr ""
+msgstr "スコア分布"
 
 #: admin/partials/mhlw-admin-individual-results.php:118
 msgid "Search:"
-msgstr ""
+msgstr "検索："
 
 #: admin/partials/mhlw-admin-group-analysis.php:42
 msgid "Select:"
-msgstr ""
+msgstr "選択してください:"
 
 #: admin/partials/mhlw-admin-individual-results.php:151
 #, php-format
 msgid "Showing %1$d of %2$d results"
-msgstr ""
+msgstr "%2$d件中%1$d件を表示しています"
 
 #: includes/class-mhlw-stress-check-config.php:181
 msgid "Skill Utilization"
-msgstr ""
+msgstr "スキルの活用"
 
 #: includes/class-mhlw-stress-check-config.php:94
 msgid "Slightly No"
-msgstr ""
+msgstr "ややいいえ"
 
 #: templates/pdf-individual-result.php:293
 #: admin/partials/mhlw-employee-results.php:157
 msgid "Social Support"
-msgstr ""
+msgstr "社会的サポート"
 
 #: admin/partials/mhlw-admin-dashboard.php:99
 #: admin/partials/mhlw-admin-individual-results.php:168
 msgid "Status"
-msgstr ""
+msgstr "状態"
 
 #: includes/class-mhlw-stress-check-user-fields.php:409
 #: admin/partials/mhlw-admin-individual-results.php:124
 msgid "Status:"
-msgstr ""
+msgstr "状態："
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:91
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:139
 #: includes/class-mhlw-stress-check-user-fields.php:349
 msgid "Stress Check"
-msgstr ""
+msgstr "ストレスチェック"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:138
 #: admin/partials/mhlw-employee-dashboard.php:27
 #: admin/partials/mhlw-stress-check-form.php:12
 msgid "Stress Check Assessment"
-msgstr ""
+msgstr "ストレスチェック評価"
 
 #: templates/pdf-individual-result.php:224
 msgid "Stress Check Assessment Report"
-msgstr ""
+msgstr "ストレスチェック評価報告書"
 
 #: includes/class-mhlw-compliant-stress-check-system-activator.php:161
 msgid "Stress Check Employee"
-msgstr ""
+msgstr "ストレスチェック担当者"
 
 #: templates/pdf-individual-result.php:14
 msgid "Stress Check Result"
-msgstr ""
+msgstr "ストレスチェック結果"
 
 #: includes/class-mhlw-stress-check-user-fields.php:120
 msgid "Stress Check Status"
-msgstr ""
+msgstr "ストレスチェック状況"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:90
 msgid "Stress Check System"
-msgstr ""
+msgstr "ストレスチェック制度"
 
 #: admin/partials/mhlw-admin-dashboard.php:30
 msgid "Stress Check System Dashboard"
-msgstr ""
+msgstr "ストレスチェックシステムダッシュボード"
 
 #: templates/pdf-individual-result.php:288
 #: admin/partials/mhlw-employee-results.php:152
 msgid "Stress Reactions"
-msgstr ""
+msgstr "ストレス反応"
 
 #: admin/partials/mhlw-employee-dashboard.php:143
 #: admin/partials/mhlw-stress-check-form.php:69
 msgid "Submit Assessment"
-msgstr ""
+msgstr "評価を送信する"
 
 #: includes/class-mhlw-stress-check-config.php:217
 msgid "Supervisor Support"
-msgstr ""
+msgstr "スーパーバイザーのサポート"
 
 #: admin/partials/mhlw-employee-results.php:84
 msgid "Take Assessment"
-msgstr ""
+msgstr "評価を受ける"
 
 #: includes/callback.php:119
 msgid "Thank you for completing the stress check."
-msgstr ""
+msgstr "ストレスチェックにご協力いただきありがとうございます。"
 
 #: includes/class-mhlw-stress-check-config.php:34
 msgid "The atmosphere in my workplace is friendly."
-msgstr ""
+msgstr "私の職場の雰囲気は友好的です。"
 
 #: admin/partials/mhlw-admin-import.php:21
 msgid "The CSV file should contain the following columns in order:"
-msgstr ""
+msgstr "CSV ファイルには、次の列が順番に含まれている必要があります。"
 
 #: includes/class-mhlw-stress-check-config.php:35
 msgid ""
 "The working environment in my workplace (noise, lighting, temperature, "
 "ventilation, etc.) is poor."
-msgstr ""
+msgstr "職場の労働環境（騒音、照明、温度、換気など）が悪いです。"
 
 #: includes/class-mhlw-stress-check-config.php:33
 msgid "There are disagreements within my department."
-msgstr ""
+msgstr "私の部署内で意見の相違があります。"
 
 #: includes/callback.php:64 includes/class-mhlw-stress-check-pdf.php:147
 msgid ""
 "This download link has expired. Please generate a new one from your My Page."
-msgstr ""
+msgstr "このダウンロードリンクは期限切れです。マイページから新しいリンクを作成してください。"
 
 #: includes/callback.php:188
 msgid ""
 "This organization has fewer than %d valid responses; therefore, group "
 "analysis results cannot be displayed."
-msgstr ""
+msgstr "この組織には有効な回答が %d 未満であるため、グループ分析結果を表示できません。"
 
 #: admin/partials/mhlw-admin-individual-results.php:247
 #: admin/partials/mhlw-individual-detail-view.php:64
@@ -1153,90 +1152,91 @@ msgid ""
 "Personnel) only. Handle this information with extreme care and in compliance "
 "with privacy regulations."
 msgstr ""
+"このページには機密の個人情報が含まれています。アクセスは実装管理者（産業医および指定担当者）のみに制限されています。この情報は、プライバシー規制を遵守し、細心の注意を払って取り扱ってください。"
 
 #: templates/pdf-individual-result.php:338
 msgid ""
 "This report was generated in accordance with the Ministry of Health, Labour "
 "and Welfare (MHLW) Stress Check System guidelines."
-msgstr ""
+msgstr "このレポートは、厚生労働省のストレスチェック制度ガイドラインに従って作成されました。"
 
 #: includes/class-mhlw-stress-check-security.php:119
 msgid "Too many failed login attempts. Please try again after %d minutes."
-msgstr ""
+msgstr "ログイン失敗回数が多すぎます。%d 分後にもう一度お試しください。"
 
 #: includes/class-mhlw-stress-check-user-fields.php:96
 #: admin/partials/mhlw-admin-import.php:54
 msgid "Top-level organization (e.g., Division)"
-msgstr ""
+msgstr "最上位組織（例：部門）"
 
 #: admin/partials/mhlw-admin-import.php:145
 msgid "Total Departments:"
-msgstr ""
+msgstr "部門の合計:"
 
 #: admin/partials/mhlw-admin-dashboard.php:34
 msgid "Total Employees"
-msgstr ""
+msgstr "従業員総数"
 
 #: admin/partials/mhlw-admin-import.php:141
 msgid "Total Employees:"
-msgstr ""
+msgstr "従業員総数:"
 
 #: admin/partials/mhlw-admin-group-analysis.php:76
 msgid "Total Respondents"
-msgstr ""
+msgstr "回答者総数"
 
 #: includes/class-mhlw-stress-check-user-fields.php:78
 #: admin/partials/mhlw-admin-import.php:44
 msgid "Unique department identifier"
-msgstr ""
+msgstr "一意の部門識別子"
 
 #: includes/class-mhlw-stress-check-user-fields.php:69
 #: admin/partials/mhlw-admin-import.php:34
 msgid "Unique employee identifier"
-msgstr ""
+msgstr "一意の従業員識別子"
 
 #: admin/partials/mhlw-admin-import.php:80
 msgid "Upload CSV File"
-msgstr ""
+msgstr "CSVファイルをアップロードする"
 
 #: includes/class-mhlw-stress-check-pdf.php:43
 msgid "User not found."
-msgstr ""
+msgstr "ユーザーが見つかりません。"
 
 #: admin/partials/mhlw-employee-dashboard.php:83
 msgid "View Detailed Results"
-msgstr ""
+msgstr "詳細な結果を表示する"
 
 #: admin/partials/mhlw-admin-individual-results.php:208
 msgid "View Details"
-msgstr ""
+msgstr "詳細を見る"
 
 #: admin/partials/mhlw-admin-dashboard.php:68
 msgid "View Group Analysis"
-msgstr ""
+msgstr "グループ分析を表示する"
 
 #: admin/partials/mhlw-admin-dashboard.php:72
 msgid "View Individual Results"
-msgstr ""
+msgstr "個別の結果を表示する"
 
 #: includes/class-mhlw-stress-check-config.php:193
 msgid "Vigor"
-msgstr ""
+msgstr "活力"
 
 #: includes/class-mhlw-stress-check-config.php:185
 msgid "Workplace Environment"
-msgstr ""
+msgstr "職場環境"
 
 #: includes/class-mhlw-stress-check-config.php:96
 #: admin/partials/mhlw-admin-import.php:35
 #: admin/partials/mhlw-admin-import.php:45
 msgid "Yes"
-msgstr ""
+msgstr "はい"
 
 #: admin/partials/mhlw-employee-dashboard.php:34
 #, php-format
 msgid "You completed this assessment on %s."
-msgstr ""
+msgstr "この評価は %s に完了しました。"
 
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:164
 #: admin/class-mhlw-compliant-stress-check-system-admin.php:177
@@ -1247,54 +1247,55 @@ msgstr ""
 #: admin/partials/mhlw-admin-individual-results.php:12
 #: admin/partials/mhlw-individual-detail-view.php:12
 msgid "You do not have permission to access this page."
-msgstr ""
+msgstr "このページにアクセスする権限がありません。"
 
 #: includes/callback.php:38 includes/class-mhlw-stress-check-pdf.php:74
 #: includes/class-mhlw-stress-check-pdf.php:88
 msgid "You do not have permission to download this PDF."
-msgstr ""
+msgstr "この PDF をダウンロードする権限がありません。"
 
 #: includes/class-mhlw-stress-check-pdf.php:37
 msgid "You do not have permission to view this PDF."
-msgstr ""
+msgstr "この PDF を表示する権限がありません。"
 
 #: admin/partials/mhlw-employee-results.php:81
 msgid "You have not completed the stress check assessment yet."
-msgstr ""
+msgstr "ストレスチェック評価はまだ完了していません。"
 
 #: admin/partials/mhlw-employee-dashboard.php:40
 msgid "Your Results Summary"
-msgstr ""
+msgstr "結果の概要"
 
 #: admin/partials/mhlw-employee-results.php:350
 #: admin/partials/mhlw-my-results.php:269
 msgid "Your Scores"
-msgstr ""
+msgstr "あなたのスコア"
 
 #: admin/partials/mhlw-my-results.php:12
 msgid "Your Stress Check Results"
-msgstr ""
+msgstr "ストレスチェックの結果"
 
 #: templates/pdf-individual-result.php:272
 #: admin/partials/mhlw-employee-dashboard.php:57
 msgid ""
 "Your stress check results do not indicate high levels of work-related stress."
-msgstr ""
+msgstr "ストレスチェックの結果では、仕事関連のストレスレベルが高いことは示されていません。"
 
 #: admin/partials/mhlw-employee-results.php:137
 msgid ""
 "Your stress check results do not indicate high levels of work-related stress."
 " Continue to monitor your work-life balance and seek support if needed."
 msgstr ""
+"ストレスチェックの結果は、仕事関連のストレスレベルが高いことを示していません。引き続きワークライフバランスを監視し、必要に応じてサポートを受けてください。"
 
 #: templates/pdf-individual-result.php:270
 #: admin/partials/mhlw-employee-dashboard.php:55
 msgid "Your stress check results indicate high levels of work-related stress."
-msgstr ""
+msgstr "ストレスチェックの結果は、仕事関連のストレスレベルが高いことを示しています。"
 
 #: admin/partials/mhlw-employee-results.php:135
 msgid ""
 "Your stress check results indicate high levels of work-related stress. "
 "Please consider consulting with your supervisor or the designated health "
 "professional."
-msgstr ""
+msgstr "ストレスチェックの結果、仕事関連のストレスレベルが高いことが示されています。上司または担当の医療専門家にご相談されることをご検討ください。"
